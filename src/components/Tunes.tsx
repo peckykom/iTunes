@@ -2,17 +2,7 @@ import React, { FC, useState } from 'react'
 import TunesSearchForm from './tunes/TunesSearchForm'
 import TunesList from './tunes/TunesList'
 import axios from 'axios'
-import { Song } from '../types'
-
-interface SongFromITunes {
-	trackId: number
-	artistName: string
-	previewUrl: string
-	artworkUrl100?: string
-	trackName: string
-	collectionName: string
-	kind?: string
-}
+import { Song, SongFromITunes } from '../types'
 
 const Tunes: FC = () => {
 	const [songs, setSongs] = useState([])
@@ -34,6 +24,7 @@ const Tunes: FC = () => {
 			})
 	}
 
+	//Only needed data from results
 	const extractData = ({
 							 trackId: id,
 							 artistName: artist,
@@ -47,7 +38,7 @@ const Tunes: FC = () => {
 
 	return (
 		<article className="tunes">
-			<h1>Tunes</h1>
+			<h1>My Tunes</h1>
 			<TunesSearchForm onSearch={handleSearch} />
 			<TunesList songs={songs} />
 		</article>

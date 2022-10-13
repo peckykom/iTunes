@@ -13,3 +13,13 @@ export interface User {
 	lastName: string
 	favoriteSong?: Song
 }
+
+export interface SongFromITunes {
+	trackId: number
+	artistName: string
+	previewUrl: string
+	artworkUrl100?: string
+	trackName: string
+	collectionName: string
+	kind?: string
+}

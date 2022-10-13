@@ -1,33 +1,34 @@
 .song {
 	color: #262626;
 	text-align: left;
-
-	max-width: 24em;
 	margin: 0 auto 2em;
 	position: relative;
-
 	box-sizing: border-box;
-
 	background-color: #fff;
 	border-radius: 0.75em;
 	border-bottom-left-radius: 0.9em;
 	border-bottom-right-radius: 0.9em;
-
 	border: 1px solid black;
 
+	.inside-box{
+		display: flex;
+		flex-direction: column;
+		justify-content: left;
+	}
+
 	.inside {
-		padding: 1.35em 1.75em 1.75em;
+		padding: 1em 1.75em 1.75em;
 	}
 
 	h2 {
 		font-size: inherit;
 		line-height: 1.5em;
 		margin: 0;
+		padding: 0 0 0.9em 0;
 	}
 
 	.player {
 		display: flex;
-		align-items: center;
 		flex-direction: row;
 		justify-content: space-between;
 		margin-top: 1.5em;
@@ -35,14 +36,17 @@
 
 	img {
 		width: 5em;
-		border: 3px solid #262626;
+		height: 5em;
+		border: 1px solid #262626;
 		border-radius: 0.5em;
+		margin: 0.3em 0 0 0;
 	}
 
 	audio {
 		outline: none;
-		max-width: 14em;
-		background: #262626;
+		width:100%;
+		border-radius: 0.5em;
+		border:1px solid #000;
 	}
 
 	audio::-webkit-media-controls-panel,
@@ -52,26 +56,17 @@
 
 	.meta {
 		font-size: 0.75em;
-		font-weight: 800;
+		font-weight: 700;
 		line-height: 1.5;
 		color: rgba(255, 255, 255, 0.9);
-
-		padding: 1.5em 2.25em;
+		padding: 1.5em 2.5em;
 		background: rgba(0, 0, 0, 0.9);
-
 		border-bottom-left-radius: 1em;
 		border-bottom-right-radius: 1em;
-	}
-}
 
-// responsive
-@media screen and (max-width: 520px) {
-	.player {
-		// audio {
-		// 	margin-top: 1.5em;
-		// }
-
-		flex-direction: column;
+		span{
+			font-weight: 400;
+		}
 	}
 }
 

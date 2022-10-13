@@ -33,6 +33,7 @@ const TunesSearchForm: FC<TunesSearchFormProps> = props => {
 					ref={searchInput}
 					onChange={handleInput}
 					className="search"
+					placeholder="write song"
 				/>
 			</form>
 	)
